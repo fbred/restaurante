@@ -1,9 +1,24 @@
 @extends('layout.template')
 
 @section('content')
+<script>
 
+        var alert = $('#alertDelete');
+        window.setTimeout(function(){ alert.fadeOut("slow") }, 5000);
+
+
+
+</script>
     <div class="cad border">
         <div class="card-body">
+            @if((\Session::has('message')))
+                <div class="alert alert-success alert-dismissible fade show" role="alert" id="alertDelete">
+                   {{\Session::get('message')}}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
             <h5 class="cad-title">Clientes</h5>
             @if(count($clientes)>0)
                 <table class="table table-ordered table-hover">

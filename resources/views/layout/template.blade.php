@@ -67,9 +67,13 @@
                         <i class="fa fa-wrench"></i> Settings
                     </a>
 
-                    <a href="#" class="dropdown-item">
+                    <a href="{{ route('logout') }}" class="dropdown-item"  onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
                         <i class="fa fa-lock"></i> Logout
                     </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
                 </div>
             </li>
         </ul>
@@ -114,7 +118,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="buttons.html" class="nav-link">
+                                <a href="/clientes" class="nav-link">
                                     <i class="icon icon-energy"></i> Lista
                                 </a>
                             </li>

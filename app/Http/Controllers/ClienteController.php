@@ -12,6 +12,11 @@ class ClienteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $clientes = Clientes::all();
@@ -81,6 +86,10 @@ class ClienteController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $cliente =  Clientes::find($id);/*Usando a classe categoria busca através do find pelo ide e armazena em categoria*/
+        if(isset($cliente)){
+            $cliente->delete();/*depois de verificar que o ID existe deleta do BD pelo ID passado*/
+        }
+        return redirect('clientes')->with('message','Apagado com sucesso');/*Retorna a categoriar*/
     }
 }

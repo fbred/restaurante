@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Carbon - Admin Template</title>
+    <link rel="stylesheet" href="{{asset('vendor/simple-line-icons/css/simple-line-icons.css')}}">
+    <link rel="stylesheet" href="{{asset('vendor/font-awesome/css/fontawesome-all.min.css')}}">
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+
 </head>
 <body class="sidebar-fixed header-fixed">
 <div class="page-wrapper">
@@ -15,7 +18,7 @@
         </a>
 
         <a class="navbar-brand" href="#">
-            <img src="./imgs/logo.png" alt="logo">
+            <img src="{{asset('imgs/logo.png')}}" alt="logo">
         </a>
 
         <a href="#" class="btn btn-link sidebar-toggle d-md-down-none">

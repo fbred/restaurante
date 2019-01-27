@@ -29,3 +29,5 @@ Route::get('/clientes/edit/{id}','ClienteController@edit');
 
 Route::get('/clientes/delete/{id}','ClienteController@destroy');
 
+Route::get('/clientes/cadastro','ClienteController@create');
+

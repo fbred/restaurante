@@ -112,7 +112,7 @@
 
                         <ul class="nav-dropdown-items">
                             <li class="nav-item">
-                                <a href="alerts.html" class="nav-link">
+                                <a href="/clientes/cadastro" class="nav-link">
                                     <i class="icon icon-energy"></i> Cadastro
                                 </a>
                             </li>

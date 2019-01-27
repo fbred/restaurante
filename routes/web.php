@@ -23,3 +23,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
+Route::get('/clientes','ClienteController@index');
+
+Route::get('/clientes/edit/{id}','ClienteController@edit');
+
+Route::get('/clientes/delete/{id}','ClienteController@delete');
+

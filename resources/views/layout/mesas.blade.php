@@ -1,4 +1,4 @@
-@extends('layout.lateral')
+@extends('layout.template')
 
 @section('content')
 

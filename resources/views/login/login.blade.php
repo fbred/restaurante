@@ -20,20 +20,31 @@
 
                     </div>
 
-                    <form method="post" action="../../Controler/acao_logar.php">
+                    <form method="post" action="{{route('login') }}">
 
                         <div class="card-body py-5">
                             <div class="form-group">
                                 <label class="form-control-label">Email</label>
-                                <input type="email" class="form-control" name="email" >
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                @if ($errors->has('email'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
                             </div>
 
                             <div class="form-group">
                                 <label class="form-control-label">Senha</label>
-                                <input type="password" class="form-control"  name="senha">
-                            </div>
+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
-                            <div><a href="/#">Não Sou Cadastrado</a></div>
+                                @if ($errors->has('password'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+
+                        </div>
+                            <div><a href="{{ route('register') }}">Não Sou Cadastrado</a></div>
                         </div>
 
 

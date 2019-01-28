@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Mesas;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('layout.mesas');
+        $mesas = Mesas::all();
+        return view('layout.mesas',compact('mesas'));
     }
 }

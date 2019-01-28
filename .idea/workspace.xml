@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b05fcdc8-6d0f-45b0-8f10-437263bd3485" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/layout/clientecadastro.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Models/ItensPedido.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2019_01_28_002330_create_itens_pedido_table.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ClienteController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClienteController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layout/template.blade.php" afterPath="$PROJECT_DIR$/resources/views/layout/template.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Clientes.php" afterPath="$PROJECT_DIR$/app/Models/Clientes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Mesas.php" afterPath="$PROJECT_DIR$/app/Models/Mesas.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Pedidos.php" afterPath="$PROJECT_DIR$/app/Models/Pedidos.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Produtos.php" afterPath="$PROJECT_DIR$/app/Models/Produtos.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2019_01_27_190006_create_produtos_table.php" afterPath="$PROJECT_DIR$/database/migrations/2019_01_27_190006_create_produtos_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2019_01_27_190229_create_mesas_table.php" afterPath="$PROJECT_DIR$/database/migrations/2019_01_27_190229_create_mesas_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2019_01_27_190304_create_pedidos_table.php" afterPath="$PROJECT_DIR$/database/migrations/2019_01_27_190304_create_pedidos_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layout/mesas.blade.php" afterPath="$PROJECT_DIR$/resources/views/layout/mesas.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,65 +28,53 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="cliente.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layout/cliente.blade.php">
+      <file leaf-file-name="mesas.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/layout/mesas.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="203">
+              <caret line="109" column="91" lean-forward="false" selection-start-line="109" selection-start-column="91" selection-end-line="109" selection-end-column="91" />
               <folding>
-                <element signature="e#588#595#0#HTML" expanded="true" />
+                <element signature="e#2417#2424#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClienteController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ClienteController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-              <folding>
-                <element signature="e#40#64#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="clientecadastro.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/layout/clientecadastro.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="template.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layout/template.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="114" column="59" lean-forward="false" selection-start-line="114" selection-start-column="59" selection-end-line="114" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="2" lean-forward="false" selection-start-line="13" selection-start-column="2" selection-end-line="16" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <file leaf-file-name="Pedidos.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Pedidos.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="65" column="43" lean-forward="true" selection-start-line="63" selection-start-column="35" selection-end-line="65" selection-end-column="43" />
+              <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItensPedido.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/ItensPedido.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="65" lean-forward="false" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Produtos.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Produtos.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="48" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2019_01_27_190304_create_pedidos_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_27_190304_create_pedidos_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -88,21 +83,51 @@
       <file leaf-file-name="Clientes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/Clientes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+            <state relative-caret-position="221">
+              <caret line="13" column="62" lean-forward="false" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="62" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <file leaf-file-name="2019_01_28_002330_create_itens_pedido_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_28_002330_create_itens_pedido_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="31" column="54" lean-forward="true" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
+            <state relative-caret-position="289">
+              <caret line="19" column="42" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2019_01_27_190006_create_produtos_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_27_190006_create_produtos_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mesas.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Models/Mesas.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
               <folding>
-                <element signature="e#7#389#0#PHP" expanded="true" />
+                <element signature="e#30#69#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2019_01_27_190229_create_mesas_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_27_190229_create_mesas_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -124,11 +149,8 @@
         <option value="$PROJECT_DIR$/resources/views/login/login.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/mesas.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layout/layouts/mesas.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
-        <option value="$PROJECT_DIR$/resources/views/layout/mesas.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layout/lateral.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_01_27_185611_create_clientes_table.php" />
-        <option value="$PROJECT_DIR$/app/Models/Clientes.php" />
         <option value="$PROJECT_DIR$/resources/views/layout/cliente.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layout/cadastroCliente.blade.php" />
@@ -136,6 +158,17 @@
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ClienteController.php" />
         <option value="$PROJECT_DIR$/resources/views/layout/clientecadastro.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_01_27_190229_create_mesas_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_01_27_190006_create_produtos_table.php" />
+        <option value="$PROJECT_DIR$/app/Models/Produtos.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_01_28_002330_create_itens_pedido_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_01_27_190304_create_pedidos_table.php" />
+        <option value="$PROJECT_DIR$/app/Models/Clientes.php" />
+        <option value="$PROJECT_DIR$/app/Models/Mesas.php" />
+        <option value="$PROJECT_DIR$/app/Models/Pedidos.php" />
+        <option value="$PROJECT_DIR$/app/Models/ItensPedido.php" />
+        <option value="$PROJECT_DIR$/resources/views/layout/mesas.blade.php" />
       </list>
     </option>
   </component>
@@ -447,11 +480,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Aprendizagens\Laravel\retaurante\app\Models" />
       <recent name="C:\xampp\htdocs\Aprendizagens\Laravel\retaurante\resources\views\layout" />
       <recent name="C:\xampp\htdocs\Aprendizagens\Laravel\retaurante\resources\views" />
       <recent name="C:\xampp\htdocs\Aprendizagens\Laravel\restauraurante\public\css" />
       <recent name="C:\xampp\htdocs\Aprendizagens\Laravel\restauraurante\public\js" />
-      <recent name="C:\xampp\htdocs\Aprendizagens\Laravel\restauraurante\resources\css" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\Aprendizagens\Laravel\retaurante\public" />
@@ -529,7 +562,7 @@
       <option name="presentableId" value="Default" />
       <updated>1548612938476</updated>
       <workItem from="1548612939756" duration="7376000" />
-      <workItem from="1548621730305" duration="10334000" />
+      <workItem from="1548621730305" duration="20482000" />
     </task>
     <task id="LOCAL-00001" summary="menu lateral">
       <created>1548623485886</created>
@@ -566,11 +599,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548631143563</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Tela de Cadastro">
+      <created>1548632098473</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1548632098473</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17710000" />
+    <option name="totallyTimeSpent" value="27858000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -584,7 +624,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -628,7 +668,8 @@
     <MESSAGE value="migratios e models clientes" />
     <MESSAGE value="CRUD clientes" />
     <MESSAGE value="Mensagem de apagado e verificação de login no controller usuário" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mensagem de apagado e verificação de login no controller usuário" />
+    <MESSAGE value="Tela de Cadastro" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tela de Cadastro" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -656,7 +697,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#7#389#0#PHP" expanded="true" />
+            <element signature="e#7#389#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -862,16 +903,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layout/mesas.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="183" column="11" lean-forward="true" selection-start-line="183" selection-start-column="11" selection-end-line="183" selection-end-column="11" />
-          <folding>
-            <element signature="e#3217#3224#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layout/cliente.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -890,14 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="2" lean-forward="false" selection-start-line="13" selection-start-column="2" selection-end-line="16" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layout/template.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -911,26 +934,8 @@
         <state relative-caret-position="455">
           <caret line="31" column="54" lean-forward="true" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
           <folding>
-            <element signature="e#7#389#0#PHP" expanded="true" />
+            <element signature="e#7#389#0#PHP" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ClienteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="32" column="21" lean-forward="false" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-          <folding>
-            <element signature="e#40#64#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Clientes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -939,6 +944,110 @@
         <state relative-caret-position="85">
           <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ClienteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="27" column="6" lean-forward="true" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+          <folding>
+            <element signature="e#40#64#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="e#40#61#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_27_190229_create_mesas_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Produtos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="48" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_28_002330_create_itens_pedido_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" column="42" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_27_190304_create_pedidos_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Clientes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="62" lean-forward="false" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_01_27_190006_create_produtos_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Mesas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+          <folding>
+            <element signature="e#30#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Pedidos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/ItensPedido.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="65" lean-forward="false" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layout/mesas.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="109" column="91" lean-forward="false" selection-start-line="109" selection-start-column="91" selection-end-line="109" selection-end-column="91" />
+          <folding>
+            <element signature="e#2417#2424#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

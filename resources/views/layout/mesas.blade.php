@@ -4,181 +4,124 @@
 
 
         <div class="row">
+            @if($mesas)
+                @foreach($mesas as $mesa)
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header bg-light">
-                        Mesa 01
+                       Mesa {{$mesa->numero_mesa}}
 
                         <div class="card-actions">
                             <a  class="btn" data-target="#modal-1">
-                                <i class="fa fa-pencil-alt" data-toggle="modal" data-target="#modal-1"></i>
+                                <i class="fa fa-pencil-alt" data-toggle="modal" data-target="#{{$mesa->id}}"></i>
                             </a>
 
                             <a href="#" class="btn">
                                 <i class="fa fa-cog"></i>
                             </a>
                         </div>
+
                     </div>
 
                     <div class="card-body">
-                        <div class="mb-4">
+                        <div class="container">
+                            <div class="row">
+                                <img src="{{asset('imgs/mesa.png')}}">
 
-                            <img src="{{asset('imgs/mesa.png')}}">
-                        </div>
+                                @if(count($mesa->pedidoAberto) > 0)
+                                <p class="text fa-pull-rightl">Mesa Ocupada</p>
+                                    @else
+                                    <p class="text fa-pull-rightl">Mesa Livre</p>
+                                @endif
+
+                            </div>
+                            @if(count($mesa->pedidoAberto) > 0)
+                                <a href=""  class="btn btn-danger btn-sm fa-pull-right">Fechar Pedido</a>
+                               @else
+                             <a href=""  class="btn btn-primary btn-sm fa-pull-right">Adicionar Pedido</a>
+                           @endif
+                    </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-header bg-light">
-                        Mesa 03
+                @if(count($mesa->pedidoAberto) > 0)
+                <div class="modal fade" id="{{$mesa->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Mesa {{$mesa->numero_mesa}}</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
 
-                        <div class="card-actions">
-                            <a  class="btn" data-target="#modal-1">
-                                <i class="fa fa-pencil-alt" data-toggle="modal" data-target="#modal-1"></i>
-                            </a>
+                            <div class="modal-body">
+                                <div class="card">
+                                    <div class="card-header bg-light">
+                                        Itens do Pedido
+                                    </div>
 
-                            <a href="#" class="btn">
-                                <i class="fa fa-cog"></i>
-                            </a>
-                        </div>
-                    </div>
+                                    <div class="card-body">
+                                        @if(count($mesa->pedidoAberto[0]->itens) > 0)
+                                        <div class="table-responsive">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Produto</th>
+                                                    <th>Quantidade</th>
+                                                    <th>Preço</th>
+                                                    <th>Total</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <?php
+                                                $total = 0
+                                                ?>
+                                                @foreach($mesa->pedidoAberto[0]->itens as $item)
+                                                    <?php
+                                                    $total+=($item->quantidade*$item->preco)
+                                                    ?>
+                                                <tr>
+                                                    <td>{{$item->id}}</td>
+                                                    <td>{{$item->descricao}}</td>
+                                                    <td>{{$item->quantidade}}</td>
+                                                    <td>{{$item->preco}}</td>
+                                                    <td>{{($item->quantidade*$item->preco)}}</td>
+                                                </tr>
+                                                    @endforeach
+                                              </tbody>
+                                            </table>
+                                            <div class="fa-pull-right">
+                                                Total ={{$total}}
+                                            </div>
+                                        </div>
+                                            @else
+                                            <p>Nenhum intem adicionado</p>
+                                        @endif
+                                    </div>
+                                </div>
 
-                    <div class="card-body">
-                        <div class="mb-4">
+                            </div>
 
-                            <img src="{{asset('imgs/mesa.png')}}">
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-link" data-dismiss="modal">Fechar</button>
+                                <button type="button" class="btn btn-primary">Editar Pedido</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                    @endif
 
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-header bg-light">
-                        Mesa 04
 
-                        <div class="card-actions">
-                            <a  class="btn" data-target="#modal-1">
-                                <i class="fa fa-pencil-alt" data-toggle="modal" data-target="#modal-1"></i>
-                            </a>
 
-                            <a href="#" class="btn">
-                                <i class="fa fa-cog"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-                        <div class="mb-4">
-
-                            <img src="{{asset('imgs/mesa.png')}}">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+                @endforeach
+            @endif
         </div>
 
 
-        <div class="modal fade" id="modal-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Pedido</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
 
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for="single-select">Example select</label>
-                            <select id="single-select" class="form-control">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                            <label for="single-select">Example select</label>
-                            <select id="single-select" class="form-control">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-header bg-light">
-                                Striped Rows
-                            </div>
-
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table table-striped">
-                                        <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Name</th>
-                                            <th>Sales</th>
-                                            <th>Price</th>
-                                            <th>Discount</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td class="text-nowrap">Samsung Galaxy S8</td>
-                                            <td>31,589</td>
-                                            <td>$800</td>
-                                            <td>5%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td class="text-nowrap">Google Pixel XL</td>
-                                            <td>99,542</td>
-                                            <td>$750</td>
-                                            <td>3%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td class="text-nowrap">iPhone X</td>
-                                            <td>62,220</td>
-                                            <td>$1,200</td>
-                                            <td>0%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td class="text-nowrap">OnePlus 5T</td>
-                                            <td>50,000</td>
-                                            <td>$650</td>
-                                            <td>5%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td class="text-nowrap">Google Nexus 6</td>
-                                            <td>400</td>
-                                            <td>$400</td>
-                                            <td>7%</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-link" data-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-primary">Salvar Pedidos</button>
-                    </div>
-                </div>
-            </div>
 
 
 @endsection

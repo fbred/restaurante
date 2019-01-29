@@ -132,7 +132,7 @@
 
                         <ul class="nav-dropdown-items">
                             <li class="nav-item">
-                                <a href="chartjs.html" class="nav-link">
+                                <a href="/produtos/cadastro" class="nav-link">
                                     <i class="icon icon-graph"></i> Cadastro Produtos
                                 </a>
                             </li>

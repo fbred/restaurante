@@ -22,7 +22,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
+/*################################PRODUTOS##########################*/
 Route::get('/clientes','ClienteController@index');
 
 Route::get('/clientes/edit/{id}','ClienteController@edit');
@@ -31,6 +31,7 @@ Route::get('/clientes/delete/{id}','ClienteController@destroy');
 
 Route::get('/clientes/cadastro','ClienteController@create');
 
+/*################################PRODUTOS##########################3*/
 Route::get('/produtos','ProdutoController@index');
 
 Route::get('/produtos/cadastro','ProdutoController@create');
@@ -38,4 +39,10 @@ Route::get('/produtos/cadastro','ProdutoController@create');
 Route::post('/produtos/inserir','ProdutoController@store');
 
 Route::get('/produtos/lista','ProdutoController@index');
+
+Route::get('/produtos/delete/{id}','ProdutoController@destroy');
+
+Route::get('/produtos/edit/{id}','ProdutoController@edit');
+
+Route::post('/produtos/update/{id}','ProdutoController@update');
 

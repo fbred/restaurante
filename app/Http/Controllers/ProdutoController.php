@@ -14,7 +14,8 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-        return view('layout.produtos');
+        $prod = Produtos::all();
+        return view('layout.produtos',compact('prod'));
     }
 
     /**
@@ -62,7 +63,11 @@ class ProdutoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $prod = Produtos::find($id);/*encontra a categoria*/
+        if (isset($prod)){
+            Return view('layout/editarproduto',compact('prod'));/*vai para a view categoria passando o registro encontrado pelo modo compact*/
+        }
+        return redirect('layout.produtos');/*caso não se encontre nada ou tente ascessar diretamente pela URL*/
     }
 
     /**
@@ -74,7 +79,14 @@ class ProdutoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $prod = Produtos::find($id);
+        if (isset($prod)){
+            $prod->descricao = $request->input('desricaoproduto');
+            $prod->preco = $request->input('precoproduto');
+            $prod->save();
+        }
+
+        return redirect('/produtos');
     }
 
     /**
@@ -85,6 +97,10 @@ class ProdutoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $prod =  Produtos::find($id);
+        if(isset($prod)){
+            $prod->delete();
+        }
+        return redirect('produtos')->with('message','Apagado com sucesso');
     }
 }

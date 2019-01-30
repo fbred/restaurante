@@ -138,8 +138,8 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="chartjs.html" class="nav-link">
-                                    <i class="icon icon-graph"></i> Estoque Produtos
+                                <a href="/produtos" class="nav-link">
+                                    <i class="icon icon-graph"></i> Lista de Produtos
                                 </a>
                             </li>
                         </ul>

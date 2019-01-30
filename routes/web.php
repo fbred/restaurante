@@ -31,5 +31,11 @@ Route::get('/clientes/delete/{id}','ClienteController@destroy');
 
 Route::get('/clientes/cadastro','ClienteController@create');
 
-Route::get('/produtos/cadastro','');
+Route::get('/produtos','ProdutoController@index');
+
+Route::get('/produtos/cadastro','ProdutoController@create');
+
+Route::post('/produtos/inserir','ProdutoController@store');
+
+Route::get('/produtos/lista','ProdutoController@index');
 

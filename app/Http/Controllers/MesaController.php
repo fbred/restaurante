@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Produtos;
 use Illuminate\Http\Request;
 
-class ProdutoController extends Controller
+class MesaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-        $prod = Produtos::all();
-        return view('layout.produtos',compact('prod'));
+        //
     }
 
     /**
@@ -25,8 +23,7 @@ class ProdutoController extends Controller
      */
     public function create()
     {
-        return view('layout.cadastroproduto');
-
+        //
     }
 
     /**
@@ -37,13 +34,7 @@ class ProdutoController extends Controller
      */
     public function store(Request $request)
     {
-        $prod = new Produtos();
-        $prod->descricao = $request->input('desricaoproduto');
-        $prod->preco = $request->input('precoproduto');
-        $prod->categoria = $request->input('categoria');
-        $prod->imagem = $request->input('imagem');
-        $prod->save();
-        return redirect('/produtos/lista');
+        //
     }
 
     /**
@@ -65,11 +56,7 @@ class ProdutoController extends Controller
      */
     public function edit($id)
     {
-        $prod = Produtos::find($id);/*encontra a categoria*/
-        if (isset($prod)){
-            Return view('layout/editarproduto',compact('prod'));/*vai para a view categoria passando o registro encontrado pelo modo compact*/
-        }
-        return redirect('layout.produtos');/*caso não se encontre nada ou tente ascessar diretamente pela URL*/
+        //
     }
 
     /**
@@ -81,14 +68,7 @@ class ProdutoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $prod = Produtos::find($id);
-        if (isset($prod)){
-            $prod->descricao = $request->input('desricaoproduto');
-            $prod->preco = $request->input('precoproduto');
-            $prod->save();
-        }
-
-        return redirect('/produtos');
+        //
     }
 
     /**
@@ -99,10 +79,6 @@ class ProdutoController extends Controller
      */
     public function destroy($id)
     {
-        $prod =  Produtos::find($id);
-        if(isset($prod)){
-            $prod->delete();
-        }
-        return redirect('produtos')->with('message','Apagado com sucesso');
+        //
     }
 }

@@ -18,6 +18,7 @@ class CreateProdutosTable extends Migration
             $table->string('descricao');
             $table->float('preco');
             $table->integer('categoria');
+            $table->string('imagem')->nullable();
             $table->timestamps();
         });
     }

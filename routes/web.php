@@ -46,3 +46,6 @@ Route::get('/produtos/edit/{id}','ProdutoController@edit');
 
 Route::post('/produtos/update/{id}','ProdutoController@update');
 
+/*#######################################MESAS###################################*/
+
+Route::get('/pedidos/{mesa}','PedidoController@index');

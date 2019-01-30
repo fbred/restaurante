@@ -27,6 +27,8 @@
 
                         <th>Descrição</th>
                         <th>Preço</th>
+                        <th>Categoria</th>
+                        <th>Imagem</th>
                         <th></th>
                     </tr>
                     </thead>
@@ -36,6 +38,8 @@
                         <tr>
                             <td>{{$p->descricao}}</td>
                             <td>{{$p->preco}}</td>
+                            <td>{{$p->categoria}}</td>
+                            <td>{{$p->imagem}}</td>
                             <td>
                                 <a href="/produtos/edit/{{$p->id}}" class="btn btn-sm btn-primary">Editar</a>
                                 <a href="/produtos/delete/{{$p->id}}" class="btn btn-sm btn-danger">Apagar</a>

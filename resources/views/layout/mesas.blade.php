@@ -38,7 +38,7 @@
                             @if(count($mesa->pedidoAberto) > 0)
                                 <a href=""  class="btn btn-danger btn-sm fa-pull-right">Fechar Pedido</a>
                                @else
-                             <a href=""  class="btn btn-primary btn-sm fa-pull-right">Adicionar Pedido</a>
+                             <a href="/pedidos/{{$mesa->numero_mesa}}"  class="btn btn-primary btn-sm fa-pull-right">Adicionar Pedido</a>
                            @endif
                     </div>
                     </div>

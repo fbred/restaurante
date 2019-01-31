@@ -22,6 +22,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/login02',function (){
+    return view('layout.login');
+});
 /*################################CLIENTES##########################*/
 Route::get('/clientes',['middleware' => 'auth', 'uses' =>'ClienteController@index']);
 

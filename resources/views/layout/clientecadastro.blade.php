@@ -1,7 +1,7 @@
 @extends('layout.template')
 
 @section('content')
-
+@csrf
     <div class="page-wrapper flex-row align-items-center">
         <div class="container">
             <div class="row justify-content-center">

@@ -35,6 +35,10 @@ Route::post('/clientes/inserir',['middleware' => 'auth', 'uses' =>'ClienteContro
 
 Route::get('/clientes/lista',['middleware' => 'auth', 'uses' =>'ClienteController@index']);
 
+Route::get('/clientes/edit/{id}',['middleware' => 'auth', 'uses' =>'ClienteController@edit']);
+
+Route::post('/clientes/update/{id}',['middleware' => 'auth', 'uses' =>'ClienteController@update']);
+
 /*################################PRODUTOS##########################3*/
 Route::get('/produtos',['middleware' => 'auth', 'uses' =>'ProdutoController@index']);
 

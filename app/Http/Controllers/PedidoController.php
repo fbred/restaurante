@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Categorias;
+use App\Models\Produtos;
 use Illuminate\Http\Request;
 
 class PedidoController extends Controller
@@ -15,7 +16,15 @@ class PedidoController extends Controller
     public function index($mesa)
     {
         $cat = Categorias::all();
+
         return view('layout.pedido',compact('mesa','cat'));
+    }
+
+    public function selecaoprodutocategoria($categoria,$mesa){
+
+        $prod = Produtos::all()->where('categoria','=',$categoria);
+
+        return view('layout.pedido_item',compact('prod','mesa'));
     }
 
     /**

@@ -41,7 +41,27 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       /* $request->validate([
+            'nome' => 'required|min:3|max:20|unique:clientes',
+            'endereco' => 'required',
+            'nascimento' => 'required',
+            'sexo' => 'required',
+            'telefone'=>'required'
+
+        ]);*/
+
+         $clien = new Clientes();
+        $clien->nome = $request->input('nome');
+        $clien->endereco = $request->input('endereco');
+        $clien->data_nascimento = $request->input('nascimento');
+        $clien->sexo = $request->input('sexo');
+        $clien->telefone = $request->input('telefone');
+        $clien->save();
+        return redirect('clientes/lista');
+        //$this->index();
+       // return view('layout.cliente');
+
+
     }
 
     /**

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Mesas;
 use Illuminate\Http\Request;
 
 class MesaController extends Controller
@@ -11,6 +12,12 @@ class MesaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    /*public function __construct()
+    {
+        $mesa = Mesas::all();
+    }*/
+
+
     public function index()
     {
         //

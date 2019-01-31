@@ -1,5 +1,5 @@
 @extends('layout.template')
-@csrf
+
 @section('content')
 <script>
 

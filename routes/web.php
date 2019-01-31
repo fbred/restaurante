@@ -22,30 +22,37 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-/*################################PRODUTOS##########################*/
-Route::get('/clientes','ClienteController@index');
+/*################################CLIENTES##########################*/
+Route::get('/clientes',['middleware' => 'auth', 'uses' =>'ClienteController@index']);
 
-Route::get('/clientes/edit/{id}','ClienteController@edit');
+Route::get('/clientes/edit/{id}',['middleware' => 'auth', 'uses' =>'ClienteController@edit']);
 
-Route::get('/clientes/delete/{id}','ClienteController@destroy');
+Route::get('/clientes/delete/{id}',['middleware' => 'auth', 'uses' =>'ClienteController@destroy']);
 
-Route::get('/clientes/cadastro','ClienteController@create');
+Route::get('/clientes/cadastro',['middleware' => 'auth', 'uses' =>'ClienteController@create']);
+
+Route::post('/clientes/inserir',['middleware' => 'auth', 'uses' =>'ClienteController@store']);
+
+Route::get('/clientes/lista',['middleware' => 'auth', 'uses' =>'ClienteController@index']);
 
 /*################################PRODUTOS##########################3*/
-Route::get('/produtos','ProdutoController@index');
+Route::get('/produtos',['middleware' => 'auth', 'uses' =>'ProdutoController@index']);
 
-Route::get('/produtos/cadastro','ProdutoController@create');
+Route::get('/produtos/cadastro',['middleware' => 'auth', 'uses' =>'ProdutoController@create']);
 
-Route::post('/produtos/inserir','ProdutoController@store');
+Route::post('/produtos/inserir',['middleware' => 'auth', 'uses' =>'ProdutoController@store']);
 
-Route::get('/produtos/lista','ProdutoController@index');
+//Route::get('/produtos/lista','ProdutoController@index');
+Route::get('/produtos/lista',['middleware' => 'auth', 'uses' =>'ProdutoController@index']);
 
-Route::get('/produtos/delete/{id}','ProdutoController@destroy');
+Route::get('/produtos/delete/{id}',['middleware' => 'auth', 'uses' =>'ProdutoController@destroy']);
 
-Route::get('/produtos/edit/{id}','ProdutoController@edit');
+Route::get('/produtos/edit/{id}',['middleware' => 'auth', 'uses' =>'ProdutoController@edit']);
 
-Route::post('/produtos/update/{id}','ProdutoController@update');
+Route::post('/produtos/update/{id}',['middleware' => 'auth', 'uses' =>'ProdutoController@update']);
 
 /*#######################################MESAS###################################*/
 
-Route::get('/pedidos/{mesa}','PedidoController@index');
+Route::get('/pedidos/{mesa}',['middleware' => 'auth', 'uses' =>'PedidoController@index']);
+
+Route::post('/pedidos/produto/categoria/{categoria}',['middleware' => 'auth', 'uses' =>'Pedidocontroller@selecaoprodutocategoria']);

@@ -11,8 +11,8 @@
                             Pedido Mesa {{$mesa}}
                         </div>
 
-                        <form action="/pedidos/produto/categoria/{categoria}/{{$mesa}}" method="POST">
-                        <input type="hidden" name="_token" value="{{csrf_token()}}">
+                        <form action="/pedido/incluir" method="POST">
+                            <input type="hidden" name="_token" value="{{csrf_token()}}">
 
                             <div class="card-body py-5">
                                 <div class="form-group">
@@ -23,8 +23,18 @@
                                         <option value="{{$c->id}}">{{$c->descricao}}</option>
                                         @endforeach
                                     </select>
+
                                 </div>
                             </div>
+
+                            <option>--- Select State ---</option>
+                            @if(!empty($states))
+                                @foreach($states as $key => $value)
+                                    <option value="{{ $key }}">{{ $value }}</option>
+                                @endforeach
+                            @endif
+
+
                         <div class="card-footer" style="align-content: center">
                             <div class="row">
                                 <div class="col-6">

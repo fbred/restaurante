@@ -10,27 +10,35 @@
                         <div class="card-header text-center text-uppercase h4 font-weight-light">
                             Cadastro Cliente
                         </div>
+                        <form action="/clientes/inserir" method="POST">
+                            <input type="hidden" name="_token" value="{{csrf_token()}}">
 
                         <div class="card-body py-5">
                             <div class="form-group">
                                 <label class="form-control-label">Nome</label>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" name="nome">
                             </div>
+                            @if($errors->has('nome'))
+                                <div class="invalid-feedback">
+                                    {{$errors->first('nome')}}
+
+                                </div>
+                            @endif
 
                             <div class="form-group">
                                 <label class="form-control-label">Endreço</label>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" name="endereco">
                             </div>
 
                             <div class="form-group">
                                 <label class="form-control-label">Data de Nascimento</label>
-                                <input type="text" class="form-control">
+                                <input type="datetime" class="form-control" name="nascimento">
                             </div>
 
 
                             <div class="form-group">
                                 <label for="multi-select">Sexo</label>
-                                <select id="multi-select">
+                                <select id="multi-select" name="sexo">
                                     <option value="M">Masculino</option>
                                     <option value="F">Feminino</option>
                                 </select>
@@ -38,7 +46,7 @@
 
                             <div class="form-group">
                                 <label class="form-control-label">Telefone</label>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" name="telefone">
                             </div>
                         </div>
 
@@ -49,9 +57,12 @@
                                 </div>
 
                                 <div class="col-6">
-                                    <button type="submit" class="btn btn-danger px-5">Cancelar</button>
+                                    <a href="/clientes" class="btn btn-danger px-5">Cancelar</a>
                                 </div>
                             </div>
+                        </div>
+                        </form>
+
                         </div>
                     </div>
                 </div>

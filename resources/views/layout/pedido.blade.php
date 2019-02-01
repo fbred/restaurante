@@ -16,27 +16,39 @@
 
                             <div class="card-body py-5">
                                 <div class="form-group">
-                                    <label for="multi-select">Categoria</label>
-                                    <select id="multi-select" name="categoria">
-                                        <option value="">Escolha uma Categoria</option>
-                                        @foreach($cat as $c)
-                                        <option value="{{$c->id}}">{{$c->descricao}}</option>
-                                        @endforeach
+                                    <label for="multi-select">Lanches</label>
+                                    <select id="categoria" name="categoria">
+                                        <option value="">Escolha Um lanche</option>
+
                                     </select>
+                                    <label for="multi-select">Bebidas</label>
+                                    <select id="bebida" name="bebida">
+                                        <option value="">Escolha uma Bebida</option>
+
+                                    </select>
+                                    <label for="multi-select">Pizzas</label>
+                                    <select id="pizza" name="Pizza">
+                                        <option value="">Uma Pizza</option>
+
+                                    </select>
+
                                 </div>
                             </div>
+
+
                         <div class="card-footer" style="align-content: center">
                             <div class="row">
                                 <div class="col-6">
-                                    <button type="submit" class="btn btn-primary px-5">Cadastrar</button>
+                                    <button type="submit" class="btn btn-primary px-5">Adicionar</button>
                                 </div>
 
                                 <div class="col-6">
-                                    <button type="submit" class="btn btn-danger px-5">Cancelar</button>
+                                    <button type="submit" class="btn btn-secondary px-5">Salvar</button>
                                 </div>
                             </div>
                         </div>
                         </form>
+                        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
                         </div>
                     </div>
                 </div>

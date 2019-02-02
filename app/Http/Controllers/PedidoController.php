@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Categorias;
+use App\Models\ItensPedido;
+use App\Models\Pedidos;
 use App\Models\Produtos;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PedidoController extends Controller
 {
@@ -91,5 +94,24 @@ class PedidoController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function addItem(Request $request){
+        $pedido = DB::table('pedidos')->where('status','=',1)->where('mesa_id','=',$request->mesa_id)->get();
+        $produto = Produtos::find($request->produto_id);
+        $data = ['pedido_id'=>$pedido[0]->id,'quantidade'=>$request->quantidade,'descricao'=>$produto->descricao,'preco'=>$produto->preco];
+        $itemPedido = ItensPedido::create($data);
+        return $itemPedido;
+
+    }
+
+    public function addPedido($id){
+        $p = DB::table('pedidos')->where('mesa_id','=',$id)->where('status','=',1)->first();
+        if(!$p){
+            $data  = ['status'=> 1,'cliente_id'=>1,'mesa_id' =>$id];
+            $pedido = Pedidos::create($data);
+        }
+
+        return $id;
     }
 }

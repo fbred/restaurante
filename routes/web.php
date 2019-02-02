@@ -60,6 +60,13 @@ Route::post('/produtos/update/{id}',['middleware' => 'auth', 'uses' =>'ProdutoCo
 
 /*#######################################MESAS###################################*/
 
-Route::get('/pedidos/{mesa}',['middleware' => 'auth', 'uses' =>'PedidoController@index']);
+Route::get('adicionar/pedido/{mesa}',['middleware' => 'auth', 'uses' =>'PedidoController@addPedido']);
 
 Route::post('/pedidos/produto/categoria/{categoria}',['middleware' => 'auth', 'uses' =>'Pedidocontroller@selecaoprodutocategoria']);
+
+Route::get('/mesas',['middleware' => 'auth', 'uses' =>'MesaControleer@index']);
+
+Route::get('/obter/produto/{id}','ProdutoController@getProduto');
+
+Route::post('/pedido/adicionar/item','PedidoController@addItem');
+

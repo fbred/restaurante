@@ -105,4 +105,11 @@ class ProdutoController extends Controller
         }
         return redirect('produtos')->with('message','Apagado com sucesso');
     }
+
+    public function getProduto($id){
+
+        $produtos = Produtos::where('categoria','=',$id)->get();
+        return $produtos;
+    }
+
 }

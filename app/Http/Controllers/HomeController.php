@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categorias;
 use App\Models\Mesas;
 use Illuminate\Http\Request;
 
@@ -25,6 +26,7 @@ class HomeController extends Controller
     public function index()
     {
         $mesas = Mesas::all();
-        return view('layout.mesas',compact('mesas'));
+            $cat = Categorias::all();
+        return view('layout.mesas',compact('mesas','cat'));
     }
 }

@@ -50,7 +50,7 @@
                                 @endif
 
                             </div>
-                            <div><a href="{{ route('register') }}">Não Sou Cadastrado</a></div>
+                            {{--<div><a href="{{ route('register') }}">Não Sou Cadastrado</a></div>--}}
                         </div>
 
 

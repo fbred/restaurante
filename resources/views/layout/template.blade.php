@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="{{asset('vendor/simple-line-icons/css/simple-line-icons.css')}}">
     <link rel="stylesheet" href="{{asset('vendor/font-awesome/css/fontawesome-all.min.css')}}">
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+    <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{asset('js/form.js')}}"></script>
+
 
 </head>
 <body class="sidebar-fixed header-fixed">
@@ -208,8 +211,8 @@
 
                         <ul class="nav-dropdown-items">
                             <li class="nav-item">
-                                <a href="blank.html" class="nav-link">
-                                    <i class="icon icon-vector"></i> Cadastar Usuário
+                                <a href="{{ route('register') }}" class="nav-link">
+                                    <i class="fa fa-plus" aria-hidden="true"></i> Cadastro Usuário
                                 </a>
                             </li>
 
@@ -235,7 +238,6 @@
         </div>
     </div>
 </div>
-<script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('vendor/popper.js/popper.min.js')}}"></script>
 <script src="{{asset('vendor/bootstrap/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('vendor/chart.js/chart.min.js')}}"></script>

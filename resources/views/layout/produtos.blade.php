@@ -3,7 +3,7 @@
 @section('content')
 <div class="cad border">
         <div class="card-body">
-            <h5 class="cad-title">Tabela de Produtos</h5>
+            <h5 class="cad-title">Produtos</h5>
             @if(count($prod)>0)
                 <table class="table table-ordered table-hover">
                     <thead>
@@ -21,7 +21,7 @@
 
                         <tr>
                             <td>{{$p->descricao}}</td>
-                            <td>{{$p->preco}}</td>
+                            <td>R$ {{number_format($p->preco,2)}}</td>
                             <td>{{$p->categoria}}</td>
                             <td>{{$p->imagem}}</td>
                             <td>
@@ -36,7 +36,7 @@
                     </tbody>
                 </table>
                 @else
-                    <h2 class="card-text">Nenhum cliente encontrado</h2>
+                    <h2 class="card-text">Nenhum produto encontrado</h2>
             @endif
 
         </div>

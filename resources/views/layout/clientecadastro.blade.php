@@ -32,7 +32,7 @@
 
                             <div class="form-group">
                                 <label class="form-control-label">Data de Nascimento</label>
-                                <input type="datetime" class="form-control" name="nascimento">
+                                <input type="date" class="form-control" name="nascimento">
                             </div>
 
 

@@ -106,9 +106,11 @@ class PedidoController extends Controller
     }
 
     public function addPedido($id){
-        $p = DB::table('pedidos')->where('mesa_id','=',$id)->where('status','=',1)->first();
+
+        $mesa = DB::table('mesas')->where('numero_mesa','=',$id)->first();
+        $p = DB::table('pedidos')->where('mesa_id','=',$mesa->id)->where('status','=',1)->first();
         if(!$p){
-            $data  = ['status'=> 1,'cliente_id'=>1,'mesa_id' =>$id];
+            $data  = ['status'=> 1,'cliente_id'=>1,'mesa_id' =>$mesa->id];
             $pedido = Pedidos::create($data);
         }
 

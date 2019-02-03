@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="{{asset('vendor/simple-line-icons/css/simple-line-icons.css')}}">
     <link rel="stylesheet" href="{{asset('vendor/font-awesome/css/fontawesome-all.min.css')}}">
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{asset('datatables.min.css')}}"/>
+    {{--<link rel="stylesheet" type="text/css" href="{{asset('datatables.min.css')}}"/>--}}
     <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
     <script src="{{asset('js/form.js')}}"></script>
-    <script type="text/javascript" src="{{asset('datatables.min.js')}}"></script>
+    {{--<script type="text/javascript" src="{{asset('datatables.min.js')}}"></script>--}}
     <style>
         .btn-circle.btn-xl {
             width: 70px;

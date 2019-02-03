@@ -38,7 +38,7 @@
                                 <script>
                                     $(function () {
                                         //#####Adicionando pedido ##########
-                                        $('#adicionarpedido{{$mesa->id}}').click(function () {
+                                        $('#adicionarpedido{{$mesa->numero_mesa}}').click(function () {
                                             $.ajax({
                                                 url: 'adicionar/pedido/{{$mesa->numero_mesa}}',
                                                 data: '',
@@ -64,7 +64,7 @@
                                     <a href="pedido/fechar/{{$mesa->pedidoAberto[0]->id}}"
                                        class="btn btn-danger btn-sm fa-pull-right">Fechar Pedido</a>
                                 @else
-                                    <button id="adicionarpedido{{$mesa->id}}"
+                                    <button id="adicionarpedido{{$mesa->numero_mesa}}"
                                             class="btn btn-primary btn-sm fa-pull-right">Adicionar Pedido
                                     </button>
                                 @endif

@@ -26,56 +26,56 @@ Route::get('/login02',function (){
     return view('layout.login');
 });
 /*################################CLIENTES##########################*/
-Route::get('/clientes',['middleware' => 'auth', 'uses' =>'ClienteController@index']);
+Route::get('/clientes','ClienteController@index');
 
-Route::get('/clientes/edit/{id}',['middleware' => 'auth', 'uses' =>'ClienteController@edit']);
+Route::get('/clientes/edit/{id}','ClienteController@edit');
 
-Route::get('/clientes/delete/{id}',['middleware' => 'auth', 'uses' =>'ClienteController@destroy']);
+Route::get('/clientes/delete/{id}','ClienteController@destroy');
 
-Route::get('/clientes/cadastro',['middleware' => 'auth', 'uses' =>'ClienteController@create']);
+Route::get('/clientes/cadastro','ClienteController@create');
 
-Route::post('/clientes/inserir',['middleware' => 'auth', 'uses' =>'ClienteController@store']);
+Route::post('/clientes/inserir','ClienteController@store');
 
-Route::get('/clientes/lista',['middleware' => 'auth', 'uses' =>'ClienteController@index']);
+Route::get('/clientes/lista','ClienteController@index');
 
-Route::get('/clientes/edit/{id}',['middleware' => 'auth', 'uses' =>'ClienteController@edit']);
+Route::get('/clientes/edit/{id}','ClienteController@edit');
 
-Route::post('/clientes/update/{id}',['middleware' => 'auth', 'uses' =>'ClienteController@update']);
+Route::post('/clientes/update/{id}','ClienteController@update');
 
 
 /*################################CATEGORIAS##########################3*/
 
-Route::get('/categoria',['middleware' => 'auth', 'uses' =>'CategoriaController@index']);
+Route::get('/categoria','CategoriaController@index');
 
-Route::post('/categoria/inserir',['middleware' => 'auth', 'uses' =>'CategoriaController@store']);
+Route::post('/categoria/inserir','CategoriaController@store');
 
-Route::get('/categoria/cadastro',['middleware' => 'auth', 'uses' =>'CategoriaController@create']);
+Route::get('/categoria/cadastro','CategoriaController@create');
 
 
 /*################################PRODUTOS##########################3*/
-Route::get('/produtos',['middleware' => 'auth', 'uses' =>'ProdutoController@index']);
+Route::get('/produtos','ProdutoController@index');
 
-Route::get('/produtos/cadastro',['middleware' => 'auth', 'uses' =>'ProdutoController@create']);
+Route::get('/produtos/cadastro','ProdutoController@create');
 
-Route::post('/produtos/inserir',['middleware' => 'auth', 'uses' =>'ProdutoController@store']);
+Route::post('/produtos/inserir','ProdutoController@store');
 
 //Route::get('/produtos/lista','ProdutoController@index');
-Route::get('/produtos/lista',['middleware' => 'auth', 'uses' =>'ProdutoController@index']);
+Route::get('/produtos/lista','ProdutoController@index');
 
-Route::get('/produtos/delete/{id}',['middleware' => 'auth', 'uses' =>'ProdutoController@destroy']);
+Route::get('/produtos/delete/{id}','ProdutoController@destroy');
 
-Route::get('/produtos/edit/{id}',['middleware' => 'auth', 'uses' =>'ProdutoController@edit']);
+Route::get('/produtos/edit/{id}','ProdutoController@edit');
 
-Route::post('/produtos/update/{id}',['middleware' => 'auth', 'uses' =>'ProdutoController@update']);
+Route::post('/produtos/update/{id}','ProdutoController@update');
 
 
 /*#######################################MESAS###################################*/
 
-Route::get('adicionar/pedido/{mesa}',['middleware' => 'auth', 'uses' =>'PedidoController@addPedido']);
+Route::get('adicionar/pedido/{mesa}','PedidoController@addPedido');
 
-Route::post('/pedidos/produto/categoria/{categoria}',['middleware' => 'auth', 'uses' =>'Pedidocontroller@selecaoprodutocategoria']);
+Route::post('/pedidos/produto/categoria/{categoria}','Pedidocontroller@selecaoprodutocategoria');
 
-Route::get('/mesas',['middleware' => 'auth', 'uses' =>'MesaControleer@index']);
+Route::get('/mesas','MesaControleer@index');
 
 Route::get('/obter/produto/{id}','ProdutoController@getProduto');
 

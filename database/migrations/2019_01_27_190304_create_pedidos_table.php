@@ -19,7 +19,7 @@ class CreatePedidosTable extends Migration
             $table->integer('cliente_id')->unsigned();
             $table->foreign('cliente_id')->references('id')->on('clientes');
             $table->integer('mesa_id')->unsigned();
-            $table->foreign('mesa_id')->references('id')->on('mesas');
+            $table->foreign('mesa')->references('id')->on('mesas');
             $table->timestamps();
         });
     }

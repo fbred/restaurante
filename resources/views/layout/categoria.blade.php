@@ -31,7 +31,7 @@
                     </tbody>
                 </table>
                 @else
-                    <h2 class="card-text">Nenhum Categoria encontrado</h2>
+                    <h2 class="card-text">Nenhuma Categoria encontrada</h2>
             @endif
 
         </div>

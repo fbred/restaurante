@@ -51,17 +51,14 @@
 
                             </div>
                             {{--<div><a href="{{ route('register') }}">Não Sou Cadastrado</a></div>--}}
-                        </div>
-
-
-                        <div class="card-footer">
                             <div class="row">
-                                <div class="col-6">
-                                    <button type="submit" class="btn btn-primary px-5">Login</button>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block" style="margin-top: 20px">Login</button>
                                 </div>
                             </div>
                         </div>
-                    </form>
+
+                        </form>
                     <div class="col-6">
                         <a href="#" class="btn btn-link">Esqueceu a senha?</a>
                     </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Categorias;
+use App\Models\Clientes;
 use App\Models\ItensPedido;
 use App\Models\Pedidos;
 use App\Models\Produtos;
@@ -106,6 +107,11 @@ class PedidoController extends Controller
     }
 
     public function addPedido($id){
+
+        $cliente = Clientes::all();
+        if (count($cliente)== 0){
+            $cl = Clientes::create(['nome'=>'Consumidor','endereco'=>'endereco consumidor','data_nascimento'=>'1999-12-01','sexo'=>'M','telefone'=>'0000-00000']);
+        }
 
         $mesa = DB::table('mesas')->where('numero_mesa','=',$id)->first();
         $p = DB::table('pedidos')->where('mesa_id','=',$mesa->id)->where('status','=',1)->first();

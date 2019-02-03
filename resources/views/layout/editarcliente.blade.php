@@ -16,11 +16,11 @@
                             <div class="card-body py-5">
                                 <div class="form-group">
                                     <label class="form-control-label">Nome</label>
-                                    <input type="text" class="form-control" name="nome" value="{{$cliente->nome}}">
+                                    <input type="text" class="form-control {{$errors->has('endereco') ? 'is-invalid' : ''}}" name="nome" value="{{$cliente->nome}}">
                                 </div>
-                                @if($errors->has('nome'))
+                                @if($errors->has('endereco'))
                                     <div class="invalid-feedback">
-                                        {{$errors->first('nome')}}
+                                        {{$errors->first('endereco')}}
 
                                     </div>
                                 @endif

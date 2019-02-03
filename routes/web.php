@@ -85,3 +85,7 @@ Route::get('pedido/fechar/{id_pedido}','PedidoController@fecharPedido');
 
 Route::post('/mesa/adicionar','MesaController@store');
 
+
+//#######################PEDIDOS#############################
+Route::get('/lista/pedido','PedidoController@index');
+

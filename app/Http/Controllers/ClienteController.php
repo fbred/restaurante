@@ -41,14 +41,25 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-       /* $request->validate([
-            'nome' => 'required|min:3|max:20|unique:clientes',
+        $regras = [
+            'nome' => 'required|min:3|max:20',
             'endereco' => 'required',
             'nascimento' => 'required',
-            'sexo' => 'required',
-            'telefone'=>'required'
+            'telefone' => 'required'
 
-        ]);*/
+        ];
+
+        //colocando o :attribute o larável trata o campo genericamente e exibe a mensagem pré determinada
+        $mensagems = [
+            'required' => 'o atributo :attribute não pode estar em branco',
+            'nome.required' => 'o nome e requerido',
+            'nome.min' => 'É nescessário mais de 02 caracteres',
+            'nome.max' => 'o maximo aceito é de 20 caracteres',
+            'nome.unique' =>'o nome já está em uso',
+            'nascimento.required' => 'A data é requerida',
+            'telefone.required' => 'a data é requerida'
+        ];
+        $request->validate($regras, $mensagems);
 
          $clien = new Clientes();
         $clien->nome = $request->input('nome');

@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Restaurante BonaPetit</title>
+    <title>BonaPetit</title>
+    <link rel="icon" href="{{asset('imgs/restaurante_icon.jpg')}}"/>
     <link rel="stylesheet" href="{{asset('vendor/simple-line-icons/css/simple-line-icons.css')}}">
     <link rel="stylesheet" href="{{asset('vendor/font-awesome/css/fontawesome-all.min.css')}}">
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
-    {{--<link rel="stylesheet" type="text/css" href="{{asset('datatables.min.css')}}"/>--}}
+    <link rel="stylesheet" type="text/css" href="{{asset('datatables.min.css')}}"/>
     <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
     <script src="{{asset('js/form.js')}}"></script>
-    {{--<script type="text/javascript" src="{{asset('datatables.min.js')}}"></script>--}}
+    <script type="text/javascript" src="{{asset('datatables.min.js')}}"></script>
     <style>
         .btn-circle.btn-xl {
             width: 70px;
@@ -193,22 +194,22 @@
                     <!--  ##############  PEDIDOS ##########-->
                     <li class="nav-item nav-dropdown">
                         <a href="#" class="nav-link nav-dropdown-toggle">
-                            <i class="icon icon-graph"></i> Pedidos<i class="fa fa-caret-left"></i>
+                            <i class="icon icon-graph"></i>Pedidos<i class="fa fa-caret-left"></i>
                         </a>
 
                         <ul class="nav-dropdown-items">
                             <li class="nav-item">
-                                <a href="chartjs.html" class="nav-link">
-                                    <i class="icon icon-graph"></i> Realizar Pedido
+                                <a href="/lista/pedido" class="nav-link">
+                                    <i class="icon icon-graph"></i> Pedidos
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="chartjs.html" class="nav-link">
+                                <a href="#" class="nav-link">
                                     <i class="icon icon-graph"></i> Pedidos Em Aberto
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="chartjs.html" class="nav-link">
+                                <a href="#" class="nav-link">
                                     <i class="icon icon-graph"></i> Pedidos Fechados
                                 </a>
                             </li>

@@ -15,7 +15,13 @@
                                 <div class="card-body py-5">
                                     <div class="form-group">
                                         <label for="produto" class="form-control-label">Descrição</label>
-                                        <input type="text" class="form-control" name="descricaocategoria">
+                                        <input type="text" class="form-control {{$errors->has('descricao') ? 'is-invalid' : ''}}" name="descricao">
+                                        @if($errors->has('descricao'))
+                                            <div class="invalid-feedback">
+                                                {{$errors->first('descricao')}}
+
+                                            </div>
+                                        @endif
                                     </div>
 
                                     <br>

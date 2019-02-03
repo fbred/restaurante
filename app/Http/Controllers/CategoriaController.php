@@ -36,9 +36,22 @@ class CategoriaController extends Controller
      */
     public function store(Request $request)
     {
+        $regras = [
+            'descricao' => 'required|min:3|max:20|unique:categorias',
+
+        ];
+
+        $mensagems = [
+            'descricao.required' => 'A descrição não pode estar em branco',
+            'descricao.min' => 'É nescessário mais de 02 caracteres',
+            'descricao.max' => 'o maximo aceito é de 20 caracteres',
+            'descricao.unique' =>'A categoria já está em uso',
+        ];
+
+        $request->validate($regras, $mensagems);
 
         $cat = new Categorias();
-        $cat->descricao = $request->input('descricaocategoria');
+        $cat->descricao = $request->input('descricao');
         $cat->save();
         return redirect('/categoria')->with('message','Categoria Cadastrada com Sucesso');
     }

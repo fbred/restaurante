@@ -15,24 +15,38 @@
 
                         <div class="card-body py-5">
                             <div class="form-group">
-                                <label class="form-control-label">Nome</label>
-                                <input type="text" class="form-control" name="nome">
-                            </div>
-                            @if($errors->has('nome'))
-                                <div class="invalid-feedback">
-                                    {{$errors->first('nome')}}
+                                <label class="form-control-label ">Nome</label>
+                                <input type="text" class="form-control {{$errors->has('nome') ? 'is-invalid' : ''}}" name="nome">
 
-                                </div>
-                            @endif
+                                @if($errors->has('nome'))
+                                    <div class="invalid-feedback">
+                                        {{$errors->first('nome')}}
+
+                                    </div>
+                                @endif
+
+                            </div>
 
                             <div class="form-group">
                                 <label class="form-control-label">Endreço</label>
-                                <input type="text" class="form-control" name="endereco">
+                                <input type="text" class="form-control {{$errors->has('endereco') ? 'is-invalid' : ''}}" name="endereco">
+                                @if($errors->has('endereco'))
+                                    <div class="invalid-feedback">
+                                        {{$errors->first('endereco')}}
+
+                                    </div>
+                                @endif
                             </div>
 
                             <div class="form-group">
                                 <label class="form-control-label">Data de Nascimento</label>
-                                <input type="date" class="form-control" name="nascimento">
+                                <input type="date" class="form-control {{$errors->has('nascimento') ? 'is-invalid' : ''}}" name="nascimento">
+                                @if($errors->has('nascimento'))
+                                    <div class="invalid-feedback">
+                                        {{$errors->first('nascimento')}}
+
+                                    </div>
+                                @endif
                             </div>
 
 
@@ -46,7 +60,13 @@
 
                             <div class="form-group">
                                 <label class="form-control-label">Telefone</label>
-                                <input type="text" class="form-control" name="telefone">
+                                <input type="text" class="form-control {{$errors->has('telefone') ? 'is-invalid' : ''}}" name="telefone">
+                                @if($errors->has('telefone'))
+                                    <div class="invalid-feedback">
+                                        {{$errors->first('telefone')}}
+
+                                    </div>
+                                @endif
                             </div>
                         </div>
 

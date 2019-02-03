@@ -111,7 +111,7 @@ class CategoriaController extends Controller
             $cat->save();
         }
 
-        return redirect('/categoria');
+        return redirect('/categoria')->with('message','Categoria Editada com sucesso');
     }
 
     /**

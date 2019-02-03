@@ -68,7 +68,7 @@ class ClienteController extends Controller
         $clien->sexo = $request->input('sexo');
         $clien->telefone = $request->input('telefone');
         $clien->save();
-        return redirect('clientes/lista');
+        return redirect('clientes/lista')->with('message','Cliente Cadastrado com sucesso');
         //$this->index();
        // return view('layout.cliente');
 
@@ -143,7 +143,7 @@ class ClienteController extends Controller
             $clien->save();
         }
 
-        return redirect('/clientes');
+        return redirect('/clientes')->with('message','Cliente Editado com sucesso');
     }
 
     /**

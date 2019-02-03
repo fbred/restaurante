@@ -29,7 +29,7 @@
                                 <div class="card-footer" style="align-content: center">
                                     <div class="row">
                                         <div class="col-6">
-                                            <button type="submit" class="btn btn-primary px-5">Editar</button>
+                                            <button type="submit" class="btn btn-primary px-5">Cadastrar</button>
                                         </div>
 
                                         <div class="col-6">

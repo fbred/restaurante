@@ -3,7 +3,7 @@
 @section('content')
     <div class="cad border">
         <div class="card-body">
-            <h5 class="cad-title">Clientes</h5>
+            <h5 class="cad-title">Categorias</h5>
             @if(count($categoria)>0)
                 <table class="table table-ordered table-hover">
                     <thead>

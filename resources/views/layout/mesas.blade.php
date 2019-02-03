@@ -146,8 +146,8 @@
                                                 "<td class='id'>" + data.id + "</td>" +
                                                 "<td class='descricao'>" + data.descricao + "</td>" +
                                                 "<td class='quantidade'>" + data.quantidade + "</td>" +
-                                                "<td class='preco'>" + data.preco + "</td>" +
-                                                "<td class='total'>" + (data.quantidade * data.preco) + "</td>" +
+                                                "<td class='preco'>R$ " + data.preco + "</td>" +
+                                                "<td class='total'>R$ " + (data.quantidade * data.preco) + "</td>" +
                                                 "</tr>";
                                             {{--var index = parseInt('{{count($mesa->pedidoAberto[0]->itens)}}');--}}
                                             {{--$('#itempedido{{$mesa->id}} > tbody > tr').eq(index+1).before(novaLinha);--}}
@@ -158,7 +158,7 @@
                                                 {{--##########################preço total################--}}
                                             var precototal = $('.precototal{{$mesa->id}}').text();
                                             var total = parseFloat(precototal) + (data.quantidade * data.preco)
-                                            $('.precototal{{$mesa->id}}').text(total)
+                                            $('.precototal{{$mesa->id}}').text('R$ '+total)
                                         }
                                     }
                                 })
@@ -269,8 +269,8 @@
                                                                 <td>{{$item->id}}</td>
                                                                 <td>{{$item->descricao}}</td>
                                                                 <td>{{$item->quantidade}}</td>
-                                                                <td>{{$item->preco}}</td>
-                                                                <td>{{($item->quantidade*$item->preco)}}</td>
+                                                                <td>R$ {{$item->preco}}</td>
+                                                                <td>R$ {{ ($item->quantidade*$item->preco)}}</td>
                                                             </tr>
                                                         @endforeach
                                                     @else

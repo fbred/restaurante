@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categorias;
 use App\Models\Produtos;
 use Illuminate\Http\Request;
 
@@ -25,7 +26,8 @@ class ProdutoController extends Controller
      */
     public function create()
     {
-        return view('layout.cadastroproduto');
+         $categoria = Categorias::all();
+        return view('layout.cadastroproduto', compact('categoria'));
 
     }
 
@@ -43,7 +45,7 @@ class ProdutoController extends Controller
         $prod->categoria = $request->input('categoria');
         $prod->imagem = $request->input('imagem');
         $prod->save();
-        return redirect('/produtos/lista');
+        return redirect('/produtos/lista')->with('message','Produto cadastrado com Sucesso');
     }
 
     /**

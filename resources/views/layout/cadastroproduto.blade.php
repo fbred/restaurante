@@ -20,17 +20,16 @@
 
                                     <div class="form-group">
                                         <label for="preco" class="form-control-label">Preço</label>
-                                        <input type="number" class="form-control" name="precoproduto">
+                                        <input type="number" class="form-control" name="precoproduto" step="0.01">
                                     </div>
                                     <br>
                                     <div class="form-group">
                                         <label for="multi-select">Categoria</label>
                                         <select id="multi-select" name="categoria">
                                             <option value="">Escolha uma Categoria</option>
-                                            <option value="1">Bebidas</option>
-                                            <option value="2">Laches</option>
-                                            <option value="3">Pizzas</option>
-                                            <option value="4">Espetinhos</option>
+                                            @foreach($categoria as $cat)
+                                            <option value="{{$cat->id}}">{{$cat->descricao}}</option>
+                                                @endforeach
                                         </select>
                                     </div>
 

@@ -42,6 +42,16 @@ Route::get('/clientes/edit/{id}',['middleware' => 'auth', 'uses' =>'ClienteContr
 
 Route::post('/clientes/update/{id}',['middleware' => 'auth', 'uses' =>'ClienteController@update']);
 
+
+/*################################CATEGORIAS##########################3*/
+
+Route::get('/categoria',['middleware' => 'auth', 'uses' =>'CategoriaController@index']);
+
+Route::post('/categoria/inserir',['middleware' => 'auth', 'uses' =>'CategoriaController@store']);
+
+Route::get('/categoria/cadastro',['middleware' => 'auth', 'uses' =>'CategoriaController@create']);
+
+
 /*################################PRODUTOS##########################3*/
 Route::get('/produtos',['middleware' => 'auth', 'uses' =>'ProdutoController@index']);
 
@@ -58,6 +68,7 @@ Route::get('/produtos/edit/{id}',['middleware' => 'auth', 'uses' =>'ProdutoContr
 
 Route::post('/produtos/update/{id}',['middleware' => 'auth', 'uses' =>'ProdutoController@update']);
 
+
 /*#######################################MESAS###################################*/
 
 Route::get('adicionar/pedido/{mesa}',['middleware' => 'auth', 'uses' =>'PedidoController@addPedido']);
@@ -69,4 +80,8 @@ Route::get('/mesas',['middleware' => 'auth', 'uses' =>'MesaControleer@index']);
 Route::get('/obter/produto/{id}','ProdutoController@getProduto');
 
 Route::post('/pedido/adicionar/item','PedidoController@addItem');
+
+Route::get('pedido/fechar/{id_pedido}','PedidoController@fecharPedido');
+
+Route::post('/mesa/adicionar','MesaController@store');
 

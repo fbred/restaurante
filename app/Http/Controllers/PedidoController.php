@@ -114,4 +114,16 @@ class PedidoController extends Controller
 
         return $id;
     }
+
+    public function fecharPedido($id_pedido){
+
+        $pedido = Pedidos::find($id_pedido);
+
+        $pedido->status = 0;
+
+        $pedido->save();
+
+        return redirect('/home')->with('message','Pedido fechado com sucesso');
+
+    }
 }

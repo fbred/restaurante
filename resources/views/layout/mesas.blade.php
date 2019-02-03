@@ -38,7 +38,7 @@
                             <script>
                                 $(function () {
                                     //#####Adicionando pedido ##########
-                                    $('#adicionarpedido{{$mesa->numero_mesa}}').click(function () {
+                                    $('#adicionarpedido{{$mesa->id}}').click(function () {
                                         $.ajax({
                                             url: 'adicionar/pedido/{{$mesa->numero_mesa}}',
                                             data: '',
@@ -61,9 +61,9 @@
                                 })
                             </script>
                             @if(count($mesa->pedidoAberto) > 0)
-                                <a href=""  class="btn btn-danger btn-sm fa-pull-right">Fechar Pedido</a>
+                                <a href="pedido/fechar/{{$mesa->pedidoAberto[0]->id}}"  class="btn btn-danger btn-sm fa-pull-right">Fechar Pedido</a>
                                @else
-                             <button id="adicionarpedido{{$mesa->numero_mesa}}"  class="btn btn-primary btn-sm fa-pull-right">Adicionar Pedido</button>
+                             <button id="adicionarpedido{{$mesa->id}}"  class="btn btn-primary btn-sm fa-pull-right">Adicionar Pedido</button>
                            @endif
                     </div>
                     </div>
@@ -96,13 +96,15 @@
                                                     if (data == ''){
                                                         alert('Nenhum produto encontrado para essa categoria')
                                                     }else{
-
-                                                        for( id in data){
+                                                        selectProduto.find('option').remove();
+                                                           for( id in data){
                                                             selectProduto.append('<option value="'+data[id].id+'">'+data[id].descricao+'</option>');
                                                         }
 
+
                                                     }
                                                     id = selecionada.value;
+
                                                 }
                                             })
                                         }
@@ -148,6 +150,10 @@
                                 })
                                 //#####FIm Adicionando item ##########
                             })
+
+
+
+//                            ##############################   MODAL ###############################
 
                         </script>
                         <div class="modal fade" id="{{$mesa->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -260,14 +266,39 @@
                     </div>
                 </div>
                     @endif
-
-
-
                 @endforeach
             @endif
         </div>
+    <div class="row">
+            <div class="col-md-12">
+                <div class="float-right">
+                    <button class="btn btn-dark btn-circle " data-toggle="modal" data-target=".bd-example-modal-sm"> <i class="fa fa-plus fa-10x" aria-hidden="true"></i> </button>
+                </div>
+            </div>
+    </div>
 
-
+{{--######################################MODAL ADICIONAR MESA###########################################--}}
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="text-center"  id="exampleModalLabel">Mesa</h5>
+            </div>
+            <form action="/mesa/adicionar"  method="post" class="">
+                @csrf
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Nº da Mesa</label>
+                    <input type="number" class="form-control" name="numero_mesa" required min="1" max="20">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary float-right">Adicionar</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 
 

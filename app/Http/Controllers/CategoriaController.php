@@ -2,30 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Mesas;
+use App\Models\Categorias;
 use Illuminate\Http\Request;
 
-class MesaController extends Controller
+class CategoriaController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    /*public function __construct()
-    {
-        $mesa = Mesas::all();
-    }*/
-
-
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function index()
     {
-        //
+        $categoria = Categorias::all();
+        return view('layout.categoria',compact('categoria'));
     }
 
     /**
@@ -35,7 +25,7 @@ class MesaController extends Controller
      */
     public function create()
     {
-        //
+        return view('layout.cadastrocategoria');
     }
 
     /**
@@ -46,16 +36,11 @@ class MesaController extends Controller
      */
     public function store(Request $request)
     {
-        $verifica = Mesas::where('numero_mesa','=',$request->numero_mesa)->first();
-        if (!$verifica){
-            $mesa = Mesas::create($request->all());
-        }else{
-            return redirect('/home')->with('error','Mesa já cadastrada');
-        }
 
-
-
-        return redirect('/home')->with('message','Messa Adicionado com Sucesso');
+        $cat = new Categorias();
+        $cat->descricao = $request->input('descricaocategoria');
+        $cat->save();
+        return redirect('/categoria')->with('message','Categoria Cadastrada com Sucesso');
     }
 
     /**

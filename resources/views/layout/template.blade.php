@@ -8,9 +8,31 @@
     <link rel="stylesheet" href="{{asset('vendor/simple-line-icons/css/simple-line-icons.css')}}">
     <link rel="stylesheet" href="{{asset('vendor/font-awesome/css/fontawesome-all.min.css')}}">
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset('datatables.min.css')}}"/>
     <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
     <script src="{{asset('js/form.js')}}"></script>
+    <script type="text/javascript" src="{{asset('datatables.min.js')}}"></script>
+    <style>
+        .btn-circle.btn-xl {
+            width: 70px;
+            height: 70px;
+            padding: 10px 16px;
+            border-radius: 35px;
+            font-size: 24px;
+            line-height: 1.33;
+        }
 
+        .btn-circle {
+            width: 40px;
+            height: 40px;
+            padding: 6px 0px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 1.42857;
+        }
+
+    </style>
 
 </head>
 <body class="sidebar-fixed header-fixed">
@@ -127,6 +149,26 @@
                             </li>
                         </ul>
                     </li>
+                    <!--  ############## CATEGORIAS ##########-->
+                    <li class="nav-item nav-dropdown">
+                        <a href="#" class="nav-link nav-dropdown-toggle">
+                            <i class="icon icon-graph"></i> Categorias <i class="fa fa-caret-left"></i>
+                        </a>
+
+                        <ul class="nav-dropdown-items">
+                            <li class="nav-item">
+                                <a href="/categoria/cadastro" class="nav-link">
+                                    <i class="icon icon-graph"></i> Cadastro Categorias
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="/categoria" class="nav-link">
+                                    <i class="icon icon-graph"></i> Lista Categorias
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                     <!--  ############## PRODUTOS ##########-->
                     <li class="nav-item nav-dropdown">
                         <a href="#" class="nav-link nav-dropdown-toggle">
@@ -224,15 +266,28 @@
 
                         </ul>
                     </li>
-
-
-
                 </ul>
             </nav>
         </div>
 
         <div class="content">
             <div class="container-fluid">
+                @if((\Session::has('message')))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert" id="alertDelete">
+                        {{\Session::get('message')}}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                @endif
+                    @if((\Session::has('error')))
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert" id="alertDelete">
+                            {{\Session::get('error')}}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    @endif
                 @yield('content')
             </div>
         </div>
@@ -243,5 +298,9 @@
 <script src="{{asset('vendor/chart.js/chart.min.js')}}"></script>
 <script src="{{asset('js/carbon.js')}}"></script>
 <script src="{{asset('js/demo.js')}}"></script>
+<script>
+    var alert = $('#alertDelete');
+    window.setTimeout(function(){ alert.fadeOut("slow") }, 5000);
+</script>
 </body>
 </html>

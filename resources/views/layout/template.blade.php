@@ -199,7 +199,7 @@
 
                         <ul class="nav-dropdown-items">
                             <li class="nav-item">
-                                <a href="/lista/pedido" class="nav-link">
+                                <a href="#" class="nav-link">
                                     <i class="icon icon-graph"></i> Pedidos
                                 </a>
                             </li>
@@ -226,19 +226,19 @@
 
                         <ul class="nav-dropdown-items">
                             <li class="nav-item">
-                                <a href="blank.html" class="nav-link">
+                                <a href="#" class="nav-link">
                                     <i class="icon icon-umbrella"></i> Fechamento de Pedido
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="blank.html" class="nav-link">
+                                <a href="#" class="nav-link">
                                     <i class="icon icon-umbrella"></i> Fechamento de Caixa
                                 </a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="blank.html" class="nav-link">
+                                <a href="#" class="nav-link">
                                     <i class="icon icon-umbrella"></i> Compras
                                 </a>
                             </li>
@@ -260,7 +260,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="blank.html" class="nav-link">
+                                <a href="#" class="nav-link">
                                     <i class="icon icon-action-redo"></i> Gerenciar Usuários
                                 </a>
                             </li>

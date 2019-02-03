@@ -1,5 +1,5 @@
 @extends('layout.template')
-
+@csrf
 @section('content')
 
     <div class="page-wrapper flex-row align-items-center">
@@ -8,14 +8,14 @@
                 <div class="col-md-10">
                     <div class="card p-md-5">
                         <div class="card-header text-center text-uppercase h4 font-weight-light">
-                            Cadastro Categoria
+                            Editar Categoria
                         </div>
-                        <form action="/categoria/inserir" method="POST">
+                        <form action="/categoria/update/{{$cat->id}}" method="POST">
                             <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <div class="card-body py-5">
                                     <div class="form-group">
                                         <label for="produto" class="form-control-label">Descrição</label>
-                                        <input type="text" class="form-control {{$errors->has('descricao') ? 'is-invalid' : ''}}" name="descricao">
+                                        <input type="text" class="form-control {{$errors->has('descricao') ? 'is-invalid' : ''}}" name="descricao" value="{{$cat->descricao}}">
                                         @if($errors->has('descricao'))
                                             <div class="invalid-feedback">
                                                 {{$errors->first('descricao')}}

@@ -38,7 +38,6 @@ class CategoriaController extends Controller
     {
         $regras = [
             'descricao' => 'required|min:3|max:20|unique:categorias',
-
         ];
 
         $mensagems = [
@@ -75,7 +74,13 @@ class CategoriaController extends Controller
      */
     public function edit($id)
     {
-        //
+
+        $cat = Categorias::find($id);
+        if (isset($cat)){
+            Return view('layout/editarcategoria',compact('cat'));
+        }
+        return redirect('layout.categorias');
+
     }
 
     /**
@@ -87,7 +92,26 @@ class CategoriaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $regras = [
+            'descricao' => 'required|min:3|max:20',
+        ];
+
+        $mensagems = [
+            'descricao.required' => 'A descrição não pode estar em branco',
+            'descricao.min' => 'É nescessário mais de 02 caracteres',
+            'descricao.max' => 'o maximo aceito é de 20 caracteres',
+        ];
+
+        $request->validate($regras, $mensagems);
+
+        $cat = Categorias::find($id);
+        if (isset($cat)){
+            $cat->descricao = $request->input('descricao');
+            $cat->save();
+        }
+
+        return redirect('/categoria');
     }
 
     /**

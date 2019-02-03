@@ -26,14 +26,20 @@
                         <div class="card-body">
                             <div class="container">
                                 <div class="row">
-                                    <img src="{{asset('imgs/mesa.png')}}">
-
+                                    <div class="col-md-6 col-sm-6 col-6">
                                     @if(count($mesa->pedidoAberto) > 0)
-                                        <p class="text fa-pull-rightl">Mesa Ocupada</p>
+                                        <img src="{{asset('imgs/mesa2.png')}}">
                                     @else
-                                        <p class="text fa-pull-rightl">Mesa Livre</p>
+                                    <img src="{{asset('imgs/mesa.png')}}">
                                     @endif
-
+                                    </div>
+                                    {{--<div class="col-md-6 col-sm-6 col-6">--}}
+                                        {{--@if(count($mesa->pedidoAberto) > 0)--}}
+                                            {{--<p class="badge badge-danger">Mesa Ocupada</p>--}}
+                                        {{--@else--}}
+                                            {{--<p class="badge badge-success">Mesa Livre</p>--}}
+                                        {{--@endif--}}
+                                    {{--</div>--}}
                                 </div>
                                 <script>
                                     $(function () {

@@ -51,6 +51,10 @@ Route::post('/categoria/inserir','CategoriaController@store');
 
 Route::get('/categoria/cadastro','CategoriaController@create');
 
+Route::get('/categoria/edit/{id}','CategoriaController@edit');
+
+Route::post('/categoria/update/{id}','CategoriaController@update');
+
 
 /*################################PRODUTOS##########################3*/
 Route::get('/produtos','ProdutoController@index');

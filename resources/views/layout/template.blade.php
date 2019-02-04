@@ -119,7 +119,7 @@
                     <!--  ############## MESAS ##########-->
                     <li class="nav-item nav-dropdown">
                         <a href="#" class="nav-link nav-dropdown-toggle">
-                            <i class="icon icon-target"></i> Messas <i class="fa fa-caret-left"></i>
+                            <i class="icon icon-target"></i> Mesas <i class="fa fa-caret-left"></i>
                         </a>
 
                         <ul class="nav-dropdown-items">

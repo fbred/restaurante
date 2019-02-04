@@ -157,8 +157,8 @@
 
                                                 {{--##########################preço total################--}}
                                             var precototal = $('.precototal{{$mesa->id}}').text();
-                                            var total = parseFloat(precototal) + (data.quantidade * data.preco)
-                                            $('.precototal{{$mesa->id}}').text('R$ '+total)
+                                            var total = parseFloat(precototal) + parseFloat(data.quantidade * data.preco)
+                                            $('.precototal{{$mesa->id}}').text(' '+total)
                                         }
                                     }
                                 })

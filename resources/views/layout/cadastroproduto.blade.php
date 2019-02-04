@@ -15,22 +15,37 @@
                                 <div class="card-body py-5">
                                     <div class="form-group">
                                         <label for="produto" class="form-control-label">Descrição</label>
-                                        <input type="text" class="form-control" name="desricaoproduto">
+                                        <input type="text" class="form-control {{$errors->has('precoproduto') ? 'is-invalid' : ''}}" name="desricaoproduto">
+                                        @if($errors->has('desricaoproduto'))
+                                            <div class="invalid-feedback">
+                                                {{$errors->first('desricaoproduto')}}
+                                            </div>
+                                            @endif
                                     </div>
 
                                     <div class="form-group">
                                         <label for="preco" class="form-control-label">Preço</label>
-                                        <input type="number" class="form-control" name="precoproduto" step="0.01">
+                                        <input type="number" class="form-control {{$errors->has('precoproduto') ? 'is-invalid' : ''}}" name="precoproduto" step="0.01">
+                                        @if($errors->has('precoproduto'))
+                                            <div class="invalid-feedback">
+                                                {{$errors->first('precoproduto')}}
+                                            </div>
+                                            @endif
                                     </div>
                                     <br>
                                     <div class="form-group">
                                         <label for="multi-select">Categoria</label>
-                                        <select id="multi-select" name="categoria">
+                                        <select id="multi-select" name="categoria" class="form-control {{$errors->has('categoria') ? 'is-invalid' : ''}}">
                                             <option value="">Escolha uma Categoria</option>
                                             @foreach($categoria as $cat)
                                             <option value="{{$cat->id}}">{{$cat->descricao}}</option>
                                                 @endforeach
                                         </select>
+                                        @if($errors->has('categoria'))
+                                            <div class="invalid-feedback">
+                                                {{$errors->first('categoria')}}
+                                            </div>
+                                        @endif
                                     </div>
 
                                     <div class="form-group">

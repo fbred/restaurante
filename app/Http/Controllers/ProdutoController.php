@@ -39,6 +39,25 @@ class ProdutoController extends Controller
      */
     public function store(Request $request)
     {
+
+        $regras = [
+            'desricaoproduto' => 'required|min:3|max:20',
+            'precoproduto' => 'required',
+            'categoria' => 'required',
+        ];
+
+        //colocando o :attribute o larável trata o campo genericamente e exibe a mensagem pré determinada
+        $mensagems = [
+            'desricaoproduto.required' => 'A descrição é requerida',
+            'desricaoproduto.min' => 'É nescessário mais de 02 caracteres',
+            'desricaoproduto.max' => 'o maximo aceito é de 20 caracteres',
+            'desricaoproduto.unique' =>'O produto já está cadastrado',
+            'precoproduto.required' => 'É nescessário Um Preço',
+            'categoria.required' => 'A categoria é nescessária'
+        ];
+
+        $request->validate($regras, $mensagems);
+
         $prod = new Produtos();
         $prod->descricao = $request->input('desricaoproduto');
         $prod->preco = $request->input('precoproduto');
@@ -83,6 +102,26 @@ class ProdutoController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        $regras = [
+            'desricaoproduto' => 'required|min:3|max:20',
+            'precoproduto' => 'required',
+            'categoria' => 'required',
+        ];
+
+        //colocando o :attribute o larável trata o campo genericamente e exibe a mensagem pré determinada
+        $mensagems = [
+            'desricaoproduto.required' => 'A descrição é requerida',
+            'desricaoproduto.min' => 'É nescessário mais de 02 caracteres',
+            'desricaoproduto.max' => 'o maximo aceito é de 20 caracteres',
+            'desricaoproduto.unique' =>'O produto já está cadastrado',
+            'precoproduto.required' => 'É nescessário Um Preço',
+            'categoria.required' => 'A categoria é nescessária'
+        ];
+
+        $request->validate($regras, $mensagems);
+
+
         $prod = Produtos::find($id);
         if (isset($prod)){
             $prod->descricao = $request->input('desricaoproduto');

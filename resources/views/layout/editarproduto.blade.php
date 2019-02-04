@@ -15,12 +15,22 @@
                                 <div class="card-body py-5">
                                     <div class="form-group">
                                         <label for="produto" class="form-control-label">Descrição</label>
-                                        <input type="text" class="form-control" name="desricaoproduto" value="{{$prod->descricao}}">
+                                        <input type="text" class="form-control {{$errors->has('desricaoproduto') ? 'is-invalid' : ''}}" name="desricaoproduto" value="{{$prod->descricao}}">
+                                        @if($errors->has('desricaoproduto'))
+                                            <div class="invalid-feedback">
+                                                {{$errors->first('desricaoproduto')}}
+                                            </div>
+                                        @endif
                                     </div>
 
                                     <div class="form-group">
                                         <label for="preco" class="form-control-label">Preço</label>
-                                        <input type="number" class="form-control" name="precoproduto" value="{{$prod->preco}}">
+                                        <input type="number" class="form-control {{$errors->has('precoproduto') ? 'is-invalid' : ''}}" name="precoproduto" value="{{$prod->preco}}">
+                                        @if($errors->has('precoproduto'))
+                                            <div class="invalid-feedback">
+                                                {{$errors->first('precoproduto')}}
+                                            </div>
+                                        @endif
                                     </div>
 
 
@@ -28,7 +38,7 @@
                                 <div class="card-footer" style="align-content: center">
                                     <div class="row">
                                         <div class="col-6">
-                                            <button type="submit" class="btn btn-primary px-5">Cadastrar</button>
+                                            <button type="submit" class="btn btn-primary px-5">Editar</button>
                                         </div>
 
                                         <div class="col-6">

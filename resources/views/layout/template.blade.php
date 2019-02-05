@@ -119,13 +119,13 @@
                     <!--  ############## MESAS ##########-->
                     <li class="nav-item nav-dropdown">
                         <a href="#" class="nav-link nav-dropdown-toggle">
-                            <i class="icon icon-target"></i> Mesas <i class="fa fa-caret-left"></i>
+                            <i class="fa fa-beer"></i> Mesas <i class="fa fa-caret-left"></i>
                         </a>
 
                         <ul class="nav-dropdown-items">
                             <li class="nav-item">
                                 <a href="{{route('home')}}" class="nav-link">
-                                    <i class="icon icon-arrow-right"></i> Mesas
+                                    <i class="fa fa-beer"></i> Mesas
                                 </a>
                             </li>
                         </ul>
@@ -133,19 +133,21 @@
                     <!--  ############## CLIENTES ##########-->
                     <li class="nav-item nav-dropdown">
                         <a href="#" class="nav-link nav-dropdown-toggle">
-                            <i class="icon icon-energy"></i> Clientes <i class="fa fa-caret-left"></i>
+                            <i class="fa fa-address-book"></i> Clientes <i class="fa fa-caret-left"></i>
+
                         </a>
 
                         <ul class="nav-dropdown-items">
                             <li class="nav-item">
                                 <a href="/clientes/cadastro" class="nav-link">
-                                    <i class="icon icon-energy"></i> Cadastro
+                                    <i class="fa fa-plus" aria-hidden="true"></i> Cadastro Clientes
                                 </a>
                             </li>
 
                             <li class="nav-item">
                                 <a href="/clientes" class="nav-link">
-                                    <i class="icon icon-energy"></i> Lista
+                                    {{--<i class="icon icon-energy"></i> Lista--}}
+                                    <i class="fa fa-check-square"></i>Lista Clientes
                                 </a>
                             </li>
                         </ul>
@@ -153,19 +155,19 @@
                     <!--  ############## CATEGORIAS ##########-->
                     <li class="nav-item nav-dropdown">
                         <a href="#" class="nav-link nav-dropdown-toggle">
-                            <i class="icon icon-graph"></i> Categorias <i class="fa fa-caret-left"></i>
+                            <i class="fa fa-tag"></i> Categorias <i class="fa fa-caret-left"></i>
                         </a>
 
                         <ul class="nav-dropdown-items">
                             <li class="nav-item">
                                 <a href="/categoria/cadastro" class="nav-link">
-                                    <i class="icon icon-graph"></i> Cadastro Categorias
+                                    <i class="fa fa-plus"></i> Cadastro Categorias
                                 </a>
                             </li>
 
                             <li class="nav-item">
                                 <a href="/categoria" class="nav-link">
-                                    <i class="icon icon-graph"></i> Lista Categorias
+                                    <i class="fa fa-check-square"></i> Lista Categorias
                                 </a>
                             </li>
                         </ul>
@@ -173,19 +175,19 @@
                     <!--  ############## PRODUTOS ##########-->
                     <li class="nav-item nav-dropdown">
                         <a href="#" class="nav-link nav-dropdown-toggle">
-                            <i class="icon icon-graph"></i> Produtos <i class="fa fa-caret-left"></i>
+                            <i class="fa fa-shopping-cart"></i> Produtos <i class="fa fa-caret-left"></i>
                         </a>
 
                         <ul class="nav-dropdown-items">
                             <li class="nav-item">
                                 <a href="/produtos/cadastro" class="nav-link">
-                                    <i class="icon icon-graph"></i> Cadastro Produtos
+                                    <i class="fa fa-plus"></i> Cadastro Produtos
                                 </a>
                             </li>
 
                             <li class="nav-item">
                                 <a href="/produtos" class="nav-link">
-                                    <i class="icon icon-graph"></i> Lista de Produtos
+                                    <i class="fa fa-check-square"></i> Lista de Produtos
                                 </a>
                             </li>
                         </ul>
